@@ -1,0 +1,53 @@
+<html>
+<head>
+<title>Login form design</title>
+     <link rel ="stylesheet" type="text/css" href="style1.css">
+</head>
+<body>
+      <div class ="loginbox">
+	  <img src="avatar.png" class="avatar">
+	  
+	  <h1>Login Here</h1>
+	  
+	  <form name="f1"  action="demo.php" onsubmit = "return validation()" method="GET">
+	   
+	   <p>Username</p>
+	     <input type="text" id ="user"name="user" placeholder="username" required></br>
+	   
+	   <p>Password</p>
+	    <input type="password" id="pass" name="pass" placeholder="Enter Password" required></br>
+	    
+		<input type="submit" name="submit" id="submit" value="Login" >&nbsp
+	    
+		<a href="#">Forgot Your Password?</a><br>
+	  </form>
+	  </div>
+	     
+        <script>
+		
+            function validation()  
+                {  
+                    var id = ocument.f1.user.value;  
+                    var ps = document.f1.pass.value;  
+                    if(id.length=="" && ps.length=="")
+					{  
+                        alert("User Name and Password fields are empty");  
+                        return false;  
+                    }  
+                    else  
+                    {  
+                        if(id.length=="") 
+						{  
+                            alert("User Name is empty");  
+                            return false;  
+                        }   
+                        if (ps.length=="")
+						{  
+                        alert("Password field is empty");  
+                        return false;  
+                        }  
+                    }                             
+                }  
+          </script>  
+</body>
+</html>
